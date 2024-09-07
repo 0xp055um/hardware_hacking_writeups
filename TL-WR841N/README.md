@@ -17,6 +17,7 @@ At an overview we managed to:
 - [Firmware Dumping](#Firmware-Dumping)
 - [Static Analysis](#Static-Analysis)
 
+
 # OSINT
 Osint (Open-source Intelligence) is about finding any publicly available information on our target device on the internet.
 
@@ -31,6 +32,7 @@ Searching specifically for our model and version ([link](https://fccid.io/TE7WR8
 
 Searching about the model MT7628NN online we find that the CPU is MIPS architecture
 ![CPU specs](Attachments/20240624183324.png)
+
 
 # UART
 Opening up the TP-LINK TL-WR841N and taking a look at the PCB we see the MCU model and the UART port we already discovered from fccid.
@@ -113,6 +115,7 @@ Finally we can use our new busybox binary with all the typical Unix commands we 
 
 ![caption](Attachments/20240624200241.png)
 
+
 # Firmware Dumping
 Another thing we haven't mentioned so far is the EEPROM right next to the UART.
 Taking a closer look we see that it says "cFeon Q32B-104".
@@ -125,6 +128,7 @@ Connecting our test hooks with the appropriate legs and to a raspberry pi pico (
 sudo flashrom -p serprog:dev=/dev/ttyACM0,spispeed=104000 -c W25Q64BV/W25Q64CV/W25Q64FV -r firmware.bin
 ```
 ![dumping the firmware](Attachments/_20240907_081355.jpg)
+
 
 # Static Analysis
 Once the process finishes we can use binwalk to extract the filesystem and analyze it.
