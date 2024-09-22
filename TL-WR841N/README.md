@@ -120,15 +120,19 @@ Finally we can use our new busybox binary with all the typical Unix commands we 
 We can set up a [bind_shell](https://github.com/lilithgkini/Malware_Development/blob/main/Bind_Shell) for persistence on the device. 
 
 Since we are working with mipsel we need to compile it for that architecture
+
 ![compile](Attachments/20240922154257.png)
 
 Then we can upload the backdoor binary to the router via tftp.
+
 ![Uploading the shell](Attachments/20240922145143.png)
 
 run `chmod +x backdoor` and execute it.
+
 ![Setting up the shell](Attachments/20240922145405.png)
 
 Finally back in our machine we can use netcat to connect to the target and get a shell.
+
 ![Getting the shell](Attachments/20240922145447.png)
 
 # Firmware Dumping
