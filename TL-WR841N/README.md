@@ -14,6 +14,7 @@ At an overview we managed to:
 - [UART](#UART)
    - [Enumeration](#Enumeration)
    - [Upload](#Upload)
+   - [Backdoor](#Backdoor)
 - [Firmware Dumping](#Firmware-Dumping)
 - [Static Analysis](#Static-Analysis)
 
