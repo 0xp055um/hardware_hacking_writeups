@@ -153,7 +153,7 @@ sudo flashrom -p serprog:dev=/dev/ttyACM0,spispeed=104000 -c W25Q64BV/W25Q64CV/W
 # Static Analysis
 Once the process finishes we can use binwalk to extract the filesystem and analyze it.
 ```bash
-binwalk firmware.bin
+binwalk -e firmware.bin
 cd _firmware.bin.extracted
 ```
 
